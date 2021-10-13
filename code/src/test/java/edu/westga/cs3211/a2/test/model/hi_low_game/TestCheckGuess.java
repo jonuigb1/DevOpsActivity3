@@ -39,6 +39,7 @@ class TestCheckGuess {
 		assertAll(
 			()->{assertEquals(GuessReport.TOO_HIGH, result, " checking result of check guess");},
 			()->{assertEquals(1, game.getGuessCount(), "checking guess count");},
+
 			()->{assertEquals(1, spy.callCount, "checking number of times random number was generated");},
 			()->{assertEquals(100, spy.lastBoundProvided, "checking last bound provided when generating random number");}
 		);
